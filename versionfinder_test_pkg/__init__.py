@@ -47,6 +47,7 @@ from versionfinder_test_pkg.somedir.otherdir.nestedfile import (
     nested_check_ver, nested_check_ver_file, NestedClass
 )
 
+
 def entrypoint():
     results = {}
 
