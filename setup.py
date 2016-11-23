@@ -57,5 +57,9 @@ setup(
     description='Description here.',
     long_description=long_description,
     keywords="",
-    classifiers=classifiers
+    classifiers=classifiers,
+    entry_points="""
+    [console_scripts]
+    versionfinder-test = versionfinder_test_pkg:entrypoint
+    """
 )
