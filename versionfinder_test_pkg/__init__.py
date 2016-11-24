@@ -55,11 +55,12 @@ logger = logging.getLogger()
 
 
 def entrypoint():
+    logger.debug('running entrypoint')
     results = {}
 
     k = 'entrypoint'
     try:
-        res = find_version('versionfinder_test_pkg')
+        res = find_version('versionfinder_test_pkg', log=True)
         results[k] = {'failed': False, 'result': res}
     except Exception as ex:
         results[k] = {
@@ -75,7 +76,8 @@ def entrypoint():
             os.path.dirname(os.path.abspath(__file__)),
             'version.py'
         ))
-        res = find_version('versionfinder_test_pkg', package_file=fpath)
+        res = find_version('versionfinder_test_pkg',
+                           package_file=fpath, log=True)
         results[k] = {'failed': False, 'result': res}
     except Exception as ex:
         results[k] = {
