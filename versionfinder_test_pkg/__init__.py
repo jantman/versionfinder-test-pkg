@@ -38,6 +38,7 @@ Jason Antman <jason@jasonantman.com> <http://www.jasonantman.com>
 import traceback
 import json
 import os
+import logging
 from versionfinder import find_version
 
 from versionfinder_test_pkg.top_level_file import (
@@ -46,6 +47,11 @@ from versionfinder_test_pkg.top_level_file import (
 from versionfinder_test_pkg.somedir.otherdir.nestedfile import (
     nested_check_ver, nested_check_ver_file, NestedClass
 )
+
+fmt = "[%(levelname)s %(filename)s:%(lineno)s - " \
+      "%(name)s.%(funcName)s() ] %(message)s"
+logging.basicConfig(level=logging.DEBUG, format=fmt)
+logger = logging.getLogger()
 
 
 def entrypoint():
