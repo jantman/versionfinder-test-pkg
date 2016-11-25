@@ -35,5 +35,5 @@ Jason Antman <jason@jasonantman.com> <http://www.jasonantman.com>
 ##################################################################################
 """
 
-VERSION = '0.2.4'
+VERSION = '0.2.5'
 PROJECT_URL = 'https://github.com/jantman/versionfinder-test-pkg'
