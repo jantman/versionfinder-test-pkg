@@ -61,7 +61,7 @@ def entrypoint():
     k = 'entrypoint'
     try:
         res = find_version('versionfinder_test_pkg', log=True)
-        results[k] = {'failed': False, 'result': res}
+        results[k] = {'failed': False, 'result': res.as_dict}
     except Exception as ex:
         results[k] = {
             'failed': True,
@@ -78,7 +78,7 @@ def entrypoint():
         ))
         res = find_version('versionfinder_test_pkg',
                            package_file=fpath, log=True)
-        results[k] = {'failed': False, 'result': res}
+        results[k] = {'failed': False, 'result': res.as_dict}
     except Exception as ex:
         results[k] = {
             'failed': True,
@@ -90,7 +90,7 @@ def entrypoint():
     k = 'top_level_file_check'
     try:
         res = check_ver()
-        results[k] = {'failed': False, 'result': res}
+        results[k] = {'failed': False, 'result': res.as_dict}
     except Exception as ex:
         results[k] = {
             'failed': True,
@@ -102,7 +102,7 @@ def entrypoint():
     k = 'top_level_file_check_file'
     try:
         res = check_ver_file()
-        results[k] = {'failed': False, 'result': res}
+        results[k] = {'failed': False, 'result': res.as_dict}
     except Exception as ex:
         results[k] = {
             'failed': True,
@@ -114,7 +114,7 @@ def entrypoint():
     k = 'top_level_class_check'
     try:
         res = TopLevelClass().find()
-        results[k] = {'failed': False, 'result': res}
+        results[k] = {'failed': False, 'result': res.as_dict}
     except Exception as ex:
         results[k] = {
             'failed': True,
@@ -126,7 +126,7 @@ def entrypoint():
     k = 'top_level_class_check_file'
     try:
         res = TopLevelClass().find_with_file()
-        results[k] = {'failed': False, 'result': res}
+        results[k] = {'failed': False, 'result': res.as_dict}
     except Exception as ex:
         results[k] = {
             'failed': True,
@@ -138,7 +138,7 @@ def entrypoint():
     k = 'nested_file_check'
     try:
         res = nested_check_ver()
-        results[k] = {'failed': False, 'result': res}
+        results[k] = {'failed': False, 'result': res.as_dict}
     except Exception as ex:
         results[k] = {
             'failed': True,
@@ -150,7 +150,7 @@ def entrypoint():
     k = 'nested_check_file'
     try:
         res = nested_check_ver_file()
-        results[k] = {'failed': False, 'result': res}
+        results[k] = {'failed': False, 'result': res.as_dict}
     except Exception as ex:
         results[k] = {
             'failed': True,
@@ -162,7 +162,7 @@ def entrypoint():
     k = 'nested_class_check'
     try:
         res = NestedClass().find()
-        results[k] = {'failed': False, 'result': res}
+        results[k] = {'failed': False, 'result': res.as_dict}
     except Exception as ex:
         results[k] = {
             'failed': True,
@@ -174,7 +174,7 @@ def entrypoint():
     k = 'nested_class_check_file'
     try:
         res = NestedClass().find_with_file()
-        results[k] = {'failed': False, 'result': res}
+        results[k] = {'failed': False, 'result': res.as_dict}
     except Exception as ex:
         results[k] = {
             'failed': True,
