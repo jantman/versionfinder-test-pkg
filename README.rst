@@ -1,5 +1,9 @@
 # versionfinder-test-pkg
 
+.. image:: http://www.repostatus.org/badges/latest/unsupported.svg
+   :alt: Project Status: Unsupported – The project has reached a stable, usable state but the author(s) have ceased all work on it. A new maintainer may be desired.
+   :target: http://www.repostatus.org/#unsupported
+
 test package for https://github.com/jantman/versionfinder acceptance tests
 
 Do not make changes here without updating the acceptance tests.
